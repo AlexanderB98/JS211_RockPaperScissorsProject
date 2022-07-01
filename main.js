@@ -14,11 +14,31 @@ const rl = readline.createInterface({
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
 
-  // Write code here
-  // Use the unit test to see what is expected
+  // should detect a tie
+  // should detect which hand won
+  // should scrub input to ensure lowercase with "trim"ed whitepace
+
+  let userOne = hand1.toLowerCase()
+  let userTwo = hand2.toLowerCase()
+
+  // if ((userOne === 'rock') && (userTwo === 'rock') ||
+  //   (userOne === 'paper') && (userTwo === 'paper') ||
+  //   (userOne === 'scissors') && (userTwo === 'scissors'))
+
+  if (userOne === userTwo)
+  {
+    return "It's a tie!";
+  } else if ((UserOne === 'paper' { //should detect which hand won
+
+
+  } else {
+
+    getPrompt()
+
+  }
+
 
 }
-
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
