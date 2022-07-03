@@ -13,32 +13,34 @@ const rl = readline.createInterface({
 
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
-
-  // should detect a tie
-  // should detect which hand won
-  // should scrub input to ensure lowercase with "trim"ed whitepace
-
-  let userOne = hand1.toLowerCase()
-  let userTwo = hand2.toLowerCase()
-
-  // if ((userOne === 'rock') && (userTwo === 'rock') ||
-  //   (userOne === 'paper') && (userTwo === 'paper') ||
-  //   (userOne === 'scissors') && (userTwo === 'scissors'))
-
-  if (userOne === userTwo)
-  {
-    return "It's a tie!";
-  } else if ((UserOne === 'paper' { //should detect which hand won
+let userOne = hand1.toLowerCase().trim()
+let userTwo = hand2.toLowerCase().trim()
 
 
-  } else {
-
-    getPrompt()
-
-  }
-
-
+if (userOne === 'scissors' && userTwo ==='scissors' ||
+    userOne === 'rock' && userTwo ==='rock' || 
+    userOne === 'paper' && userTwo ==='paper')
+    {
+  return "It's a tie!"
 }
+ else if (userOne === 'rock' && userTwo ==='scissors' ||
+          userOne === 'scissors' && userTwo === 'paper' ||
+          userOne === 'paper' && userTwo ==='rock')
+          {
+   return "Hand one wins!"         
+          }
+  else if (userTwo === 'rock' && userOne ==='scissors' ||
+           userTwo === 'scissors' && userOne === 'paper' ||
+           userTwo === 'paper' && userOne ==='rock')
+          {
+   return "Hand two wins!"         
+          }
+else {
+  return "invalid arguments"
+}
+
+};
+
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
